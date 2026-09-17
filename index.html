@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AeroCameroon - Réservez votre vol</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body { background: linear-gradient(135deg, #0f172a, #1e2937); color: white; }
+    header {
+      background: rgba(0,0,0,0.8);
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { font-size: 28px; font-weight: bold; color: #00bfff; }
+    
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random/1920x1080/?airplane') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .search-box {
+      background: white;
+      color: #333;
+      padding: 2rem;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    }
+    .search-box input, .search-box select {
+      padding: 12px;
+      margin: 8px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 100%;
+    }
+    button {
+      background: #00bfff;
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover { background: #0099cc; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">✈️ AeroCameroon</div>
+    <nav>
+      <a href="#" style="color:white; margin:0 15px; text-decoration:none;">Vols</a>
+      <a href="#" style="color:white; margin:0 15px; text-decoration:none;">Promotions</a>
+      <a href="#" style="color:white; margin:0 15px; text-decoration:none;">Mon Compte</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="search-box">
+      <h1 style="color:#333; margin-bottom:20px;">Où allez-vous aujourd'hui ?</h1>
+      
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <input type="text" placeholder="Départ (ex: Yaoundé)" style="flex:1;">
+        <input type="text" placeholder="Arrivée (ex: Douala, Paris)" style="flex:1;">
+      </div>
+      
+      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+        <input type="date" style="flex:1;">
+        <input type="date" style="flex:1;">
+      </div>
+      
+      <div style="display:flex; gap:10px; margin-top:10px;">
+        <select style="flex:1;">
+          <option>1 Passager</option>
+          <option>2 Passagers</option>
+          <option>3 Passagers</option>
+        </select>
+        <select style="flex:1;">
+          <option>Économique</option>
+          <option>Business</option>
+        </select>
+      </div>
+
+      <button onclick="rechercherVols()">🔍 Rechercher des vols</button>
+    </div>
+  </section>
+
+  <script>
+    function rechercherVols() {
+      alert("🎉 Recherche lancée !\n\nVoici quelques vols disponibles (simulation) :\n\n" +
+            "1. Yaoundé → Douala   |  45 000 FCFA   |  08:30\n" +
+            "2. Yaoundé → Paris    |  650 000 FCFA  |  22:15\n" +
+            "3. Douala → Dakar     |  180 000 FCFA  |  10:45");
+      
+      if(confirm("Voulez-vous voir le storyboard détaillé du parcours complet ?")) {
+        window.location.href = "#"; // Tu peux ajouter plus de pages ici
+      }
+    }
+  </script>
+
+</body>
+</html>
